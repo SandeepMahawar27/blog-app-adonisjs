@@ -1,0 +1,19 @@
+@layout('layouts.main')
+
+@section('title')
+ BlogApp - Share Your Thoughts...
+@endsection
+
+@section('content') 
+<h1>All Blogs</h1>
+
+@each(blog in blogs)
+<div class="blog-container">
+   <div class="blank"></div>
+   <div class="blog-info">
+    <h3>{{blog.title}}</h3> 
+    <p>{{blog.description}}</p>
+   </div>
+</div>
+@endeach
+@endsection
